@@ -13,11 +13,33 @@
 
   /* Colors */
   --primary-color: #fbf6f6;
+  --secondary-color: #f4f1ec;
   --text-color: #1a1a19;
   --accent-color: #6a7e3f;
   --dark-accent-color: #4c5c2d;
 }
 
+/* Default Styles */
+
 body {
   font-family: var(--body-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font-family);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+}
+h2 {
+  font-size: var(--font-size-lg);
+}
+h3 {
+  font-size: var(--font-size-base);
 }
