@@ -14,9 +14,21 @@
   /* Colors */
   --primary-color: #fbf6f6;
   --secondary-color: #f4f1ec;
-  --text-color: #1a1a19;
-  --accent-color: #6a7e3f;
-  --dark-accent-color: #4c5c2d;
+  --text-color: #666666;
+  --text-dark-color: #333333;
+  --accent-color: #415844;
+  --dark-accent-color: #2b3a2d;
+
+  /* icon sizes */
+  --icon-size-sm: 1.3rem;
+
+  /* icon colors */
+  --icon-white-color: brightness(0) saturate(100%) invert(99%) sepia(2%)
+    saturate(6862%) hue-rotate(294deg) brightness(109%) contrast(97%);
+  --icon-accent-color: brightness(0) saturate(100%) invert(47%) sepia(26%)
+    saturate(731%) hue-rotate(38deg) brightness(92%) contrast(87%);
+  --icon-dark-accent-color: brightness(0) saturate(100%) invert(30%) sepia(8%)
+    saturate(2381%) hue-rotate(39deg) brightness(103%) contrast(87%);
 }
 
 /* Default Styles */
@@ -42,4 +54,37 @@ h2 {
 }
 h3 {
   font-size: var(--font-size-base);
+}
+
+/* header style */
+header > .top-header {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1em 2em;
+}
+
+.top-header > div {
+  flex: 1;
+}
+
+header > .top-header img {
+  width: var(--icon-size-sm);
+  filter: var(--icon-white-color);
+}
+
+/* header social icons */
+.top-header > .social-icons {
+  display: flex;
+  gap: 1em;
+}
+
+.top-header > .announcements {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 2 100px;
 }
