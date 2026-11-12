@@ -21,6 +21,8 @@
 
   /* icon sizes */
   --icon-size-sm: 1.3rem;
+  --icon-size-base: 1.5rem;
+  --icon-size-large: 2rem;
 
   /* icon colors */
   --icon-white-color: brightness(0) saturate(100%) invert(99%) sepia(2%)
@@ -29,12 +31,22 @@
     saturate(731%) hue-rotate(38deg) brightness(92%) contrast(87%);
   --icon-dark-accent-color: brightness(0) saturate(100%) invert(30%) sepia(8%)
     saturate(2381%) hue-rotate(39deg) brightness(103%) contrast(87%);
+  --icon-dark-color: brightness(0) saturate(100%) invert(17%) sepia(14%)
+    saturate(0%) hue-rotate(249deg) brightness(100%) contrast(92%);
+
+  /* logo width */
+  --logo-width: 150px;
+
+  /* border style */
+  --border-style: 2px solid var(--secondary-color);
+  --border-radius: 10px;
 }
 
 /* Default Styles */
 
 body {
   font-family: var(--body-font-family);
+  color: var(--text-dark-color);
 }
 
 h1,
@@ -56,18 +68,37 @@ h3 {
   font-size: var(--font-size-base);
 }
 
+input {
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
+}
+
+input::placeholder {
+  color: var(--text-dark-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+img[src$=".svg"] {
+  width: var(--icon-size-large);
+  filter: var(--icon-dark-color);
+}
 /* header style */
+
 header > .top-header {
   background-color: var(--accent-color);
   color: var(--primary-color);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 1em 2em;
+  font-size: var(--font-size-sm);
 }
 
+/* top header */
 .top-header > div {
   flex: 1;
 }
@@ -87,4 +118,46 @@ header > .top-header img {
   display: flex;
   justify-content: space-between;
   flex: 1 2 100px;
+}
+
+/* middle header */
+header > .middle-header {
+  display: flex;
+  padding: 1em 2em;
+  border-bottom: var(--border-style);
+  align-items: center;
+}
+
+.middle-header > div {
+  flex: 1;
+}
+
+.middle-header > .logo img {
+  max-width: var(--logo-width);
+}
+
+.middle-header > .search-bar {
+  flex: 2;
+  border-radius: var(--border-radius);
+  border: var(--border-style);
+  background-color: var(--secondary-color);
+  display: flex;
+  padding: 0 1em 0 0;
+}
+
+.middle-header > .search-bar input {
+  background-color: var(--secondary-color);
+  border: var(--border-style);
+}
+
+.middle-header > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+}
+
+.header-user-login {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
