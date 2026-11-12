@@ -40,6 +40,9 @@
   /* border style */
   --border-style: 2px solid var(--secondary-color);
   --border-radius: 10px;
+
+  /* transition time */
+  --transition-time: 0.3s;
 }
 
 /* Default Styles */
@@ -85,6 +88,7 @@ input:focus {
 img[src$=".svg"] {
   width: var(--icon-size-large);
   filter: var(--icon-dark-color);
+  display: inline;
 }
 /* header style */
 
@@ -103,21 +107,26 @@ header > .top-header {
   flex: 1;
 }
 
-header > .top-header img {
-  width: var(--icon-size-sm);
-  filter: var(--icon-white-color);
-}
-
 /* header social icons */
 .top-header > .social-icons {
   display: flex;
   gap: 1em;
 }
 
+.top-header > .social-icons img {
+  width: var(--icon-size-sm);
+  filter: var(--icon-white-color);
+}
+
 .top-header > .announcements {
   display: flex;
   justify-content: space-between;
   flex: 1 2 100px;
+  align-items: center;
+}
+
+.announcements img {
+  filter: var(--icon-white-color);
 }
 
 /* middle header */
@@ -154,10 +163,41 @@ header > .middle-header {
   display: flex;
   justify-content: flex-end;
   gap: 1.5em;
+  align-items: center;
 }
 
 .header-user-login {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+/* bottom header */
+.bottom-header {
+  padding: 1em 2em;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: var(--header-font-family);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  transition: var(--transition-time);
+}
+
+nav a:hover {
+  filter: var(--icon-accent-color);
 }
