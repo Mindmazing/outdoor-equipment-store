@@ -6,6 +6,7 @@
   --body-font-family: "DM Sans", sans-serif;
 
   /* Font Sizes */
+  --font-size-xsm: 0.8rem;
   --font-size-sm: 0.9rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.2rem;
@@ -400,4 +401,115 @@ nav a:hover {
 
 .promotions > div:hover > img {
   transform: scale(1.1, 1.1);
+}
+
+/* featured products */
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6em 2em;
+  gap: 2em;
+}
+
+.products-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.1em;
+}
+
+.product-card a {
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0.7em;
+  border: var(--border-style);
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card .product-image {
+  flex: 1;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.product-card .product-image > img {
+  flex: 1;
+  object-fit: contain;
+  transition: var(--transition-time);
+  width: 85%;
+}
+
+.product-card:hover .product-image > img {
+  transform: scale(1.1, 1.1);
+}
+
+.product-card:hover .product-buttons {
+  display: flex;
+}
+
+.product-card .discount-tag {
+  background-color: var(--text-dark-color);
+  color: var(--primary-color);
+  padding: 0.2em 0.5em;
+  font-size: var(--font-size-xsm);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product-card .product-detail {
+  padding-bottom: 1em;
+}
+
+.product-card .product-title {
+  margin-bottom: 0.5em;
+}
+
+.product-card .product-price {
+  display: flex;
+  align-items: center;
+}
+
+.product-card .product-price span:first-child {
+  text-decoration: line-through;
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+}
+
+.product-card .product-price span:last-child {
+  font-weight: bold;
+  margin-left: 1em;
+}
+
+.product-card .product-buttons {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  display: none;
+}
+
+.product-card .product-buttons > div {
+  background-color: var(--accent-color);
+  padding: 0.4em;
+  border-radius: var(--border-radius);
+  transition: var(--transition-time);
+}
+
+.product-card .product-buttons > div img {
+  display: block;
+  filter: var(--icon-white-color);
+}
+
+.product-card .product-buttons > div:hover {
+  background-color: var(--text-dark-color);
 }
