@@ -6,7 +6,7 @@
   --body-font-family: "DM Sans", sans-serif;
 
   /* Font Sizes */
-  --font-size-sm: 0.875rem;
+  --font-size-sm: 0.9rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.2rem;
   --font-size-xl: 1.7rem;
@@ -22,8 +22,8 @@
 
   /* icon sizes */
   --icon-size-sm: 1.3rem;
-  --icon-size-base: 1.5rem;
-  --icon-size-large: 2rem;
+  --icon-size-base: 2rem;
+  --icon-size-large: 3rem;
 
   /* icon colors */
   --icon-white-color: brightness(0) saturate(100%) invert(99%) sepia(2%)
@@ -74,6 +74,11 @@ h3 {
   font-size: var(--font-size-lg);
 }
 
+p {
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+}
+
 input {
   width: 100%;
   padding: 0.5em 1em;
@@ -89,7 +94,7 @@ input:focus {
 }
 
 img[src$=".svg"] {
-  width: var(--icon-size-large);
+  width: var(--icon-size-base);
   filter: var(--icon-dark-color);
   display: inline;
 }
@@ -123,7 +128,7 @@ header > .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 0.8em 2em;
   font-size: var(--font-size-sm);
 }
 
@@ -141,6 +146,7 @@ header > .top-header {
 .top-header > .social-icons img {
   width: var(--icon-size-sm);
   filter: var(--icon-white-color);
+  display: block;
 }
 
 .top-header > .announcements {
@@ -190,6 +196,14 @@ header > .middle-header {
   justify-content: flex-end;
   gap: 1.5em;
   align-items: center;
+}
+
+.middle-header > div:last-child > div {
+  transition: var(--transition-time);
+}
+
+.middle-header > div:last-child > div:hover {
+  filter: var(--icon-accent-color);
 }
 
 .header-user-login {
@@ -286,7 +300,6 @@ nav a:hover {
 
 .category-card {
   height: 370px;
-  border-radius: var(--border-radius);
   flex: 1;
   display: flex;
   align-items: end;
@@ -327,4 +340,44 @@ nav a:hover {
   height: inherit;
   object-fit: cover;
   transition: var(--transition-time);
+}
+
+/* features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  padding: 6em 2em;
+}
+
+.features-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.features-card img {
+  width: var(--icon-size-large);
+  margin-bottom: 0.5em;
+  filter: var(--icon-dark-accent-color);
+}
+
+/* promotions */
+.promotions {
+  padding: 0 2em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr;
+}
+
+.promotions > div {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  justify-content: center;
+  height: 350px;
+  background-color: var(--dark-accent-color);
+  padding: 1em;
 }
