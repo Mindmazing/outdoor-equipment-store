@@ -380,4 +380,24 @@ nav a:hover {
   height: 350px;
   background-color: var(--dark-accent-color);
   padding: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.promotions > div > * {
+  z-index: 1;
+}
+
+.promotions > div > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: inherit;
+  width: 100%;
+  transition: var(--transition-time);
+}
+
+.promotions > div:hover > img {
+  transform: scale(1.1, 1.1);
 }
