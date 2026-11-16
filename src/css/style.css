@@ -575,3 +575,27 @@ nav a:hover {
 .review h4 {
   margin-top: auto;
 }
+
+/* call to action section */
+.call-to-action {
+  padding: 3em 2em;
+}
+
+.call-to-action > div {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  flex-direction: column;
+  background-image: url("../assets/images/neom-nMzbnMzMjYU-unsplash.webp");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.call-to-action > div h2 {
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color);
+}
+
+/* footer */
