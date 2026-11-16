@@ -97,7 +97,6 @@ input:focus {
 img[src$=".svg"] {
   width: var(--icon-size-base);
   filter: var(--icon-dark-color);
-  display: inline;
 }
 
 .btn-primary {
@@ -545,4 +544,34 @@ nav a:hover {
   color: var(--primary-color);
   background-position: center;
   background-size: cover;
+}
+
+/* reviews section */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3em 2em;
+  gap: 1em;
+}
+
+.review {
+  background-color: var(--secondary-color);
+  padding: 2em;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+
+.review p {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+
+.review img {
+  width: var(--icon-size-large);
+}
+
+.review h4 {
+  margin-top: auto;
 }
