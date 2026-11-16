@@ -668,3 +668,17 @@ footer > div:last-child {
   text-align: center;
   padding: 1em;
 }
+
+footer .social-links {
+  display: flex;
+  gap: 0.5em;
+}
+
+footer .social-links img {
+  width: var(--icon-size-large);
+  transition: var(--transition-time);
+}
+
+footer .social-links img:hover {
+  filter: var(--icon-dark-accent-color);
+}
