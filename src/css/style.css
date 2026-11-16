@@ -415,8 +415,15 @@ nav a:hover {
 .products-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: 0.1em;
+}
+
+.col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .product-card a {
@@ -512,4 +519,30 @@ nav a:hover {
 
 .product-card .product-buttons > div:hover {
   background-color: var(--text-dark-color);
+}
+
+/* offers */
+.offers {
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+}
+
+.offers > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+.offers > div:first-child {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 0.5em;
+  background-image: url("../assets/images/scott-goodwill-y8Ngwq34_Ak-unsplash.webp");
+  color: var(--primary-color);
+  background-position: center;
+  background-size: cover;
 }
