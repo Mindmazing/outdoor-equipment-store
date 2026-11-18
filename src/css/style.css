@@ -52,6 +52,7 @@
 body {
   font-family: var(--body-font-family);
   color: var(--text-dark-color);
+  position: relative;
 }
 
 h1,
@@ -216,6 +217,7 @@ header > .middle-header {
 /* bottom header */
 .bottom-header {
   padding: 1em 2em;
+  position: sticky;
 }
 
 nav ul {
@@ -681,4 +683,25 @@ footer .social-links img {
 
 footer .social-links img:hover {
   filter: var(--icon-dark-accent-color);
+}
+
+/* phone navigation styles */
+.phone-nav {
+  padding: 1em;
+}
+
+.phone-nav .phone-search {
+  display: flex;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 0 0.5em 0 0;
+}
+
+.phone-search input {
+  background-color: var(--secondary-color);
+}
+
+.phone-bottom-nav {
+  display: flex;
+  gap: 1em;
 }
